@@ -1,0 +1,10 @@
+version: "3.3"
+services:
+  nats:
+    image: nats:2.6.1
+    container_name: nats
+    env_file:
+      - .env
+    ports:
+      - ${CONTAINER_PORT_MAP}
+    restart: always
