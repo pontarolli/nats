@@ -4,7 +4,7 @@ services:
     image: nats:2.6.1
     container_name: nats
     env_file:
-      - .env
+      - .env # Variavel de ambiente que sera usada  para configurar o NATS Server neste docker-compose.yml
     ports:
       - "${NATS_MAIN_PORT}:4222"   # Porta para conexões de cliente
       - "${NATS_ROUTE_PORT}:6222"  # Porta para roteamento entre servidores NATS
