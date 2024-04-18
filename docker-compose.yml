@@ -6,5 +6,7 @@ services:
     env_file:
       - .env
     ports:
-      - ${CONTAINER_PORT_MAP}
+      - "${NATS_MAIN_PORT}:4222"   # Porta para conexões de cliente
+      - "${NATS_ROUTE_PORT}:6222"  # Porta para roteamento entre servidores NATS
+      - "${NATS_MONITOR_PORT}:8222" # Porta para o painel de monitoramento HTTP
     restart: always

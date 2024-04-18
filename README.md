@@ -2,5 +2,6 @@
 
 ## Run
 ```
-docker-compose up -d
+cd nats
+docker compose up
 ```
