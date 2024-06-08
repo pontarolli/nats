@@ -9,7 +9,7 @@ If you are using UFW (Uncomplicated Firewall) on the Docker host, execute the fo
 ```bash
 sudo apt install ufw
 sudo ufw enable
-sudo reboot
+sudo reboot 
 
 # Allow the main NATS port for client connections
 sudo ufw allow 4222
